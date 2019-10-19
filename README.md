@@ -1,6 +1,7 @@
 # FirstAngularPro-NargsKtch
 
 Project Overview:
+Check the folder "appform"
 It is an online Indian homemade food application. The application consists of a menu for different food items, food cart, and contact form
 
 Technologies:
