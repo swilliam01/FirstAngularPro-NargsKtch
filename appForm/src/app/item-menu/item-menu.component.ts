@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Item } from '../item';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-item-menu',
@@ -9,8 +10,8 @@ import { Item } from '../item';
 })
 export class ItemMenuComponent implements OnInit {
   menuItems: Item[];
-  itemSelected;
-  constructor(private itemService: ItemService) { }
+  // itemSelected;
+  constructor(private itemService: ItemService, private orderService: OrderService) { }
 
 
   getItems(): void {
@@ -19,10 +20,10 @@ export class ItemMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getItems();
+    this.getItems(); 
   }
-  display(item){
-    this.itemSelected = item.price;
-    console.log(item);
-  }
+  // display(item){
+  //   this.itemSelected = item.price;
+  //   console.log(item);
+  // }
 }

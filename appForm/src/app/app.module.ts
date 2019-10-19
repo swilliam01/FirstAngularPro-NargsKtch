@@ -11,6 +11,16 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ItemMenuComponent } from './item-menu/item-menu.component';
 import { ItemComponent } from './item/item.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule  } from '@angular/fire/auth';
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { RegisterComponent } from './register/register.component';
+import { OrderComponent } from './order/order.component';
+import { environment } from '../environments/environment';
+import { AuthService } from './auth.service';
+import { AngularFirestoreModule } from '@angular/fire/firestore'  
+
 
 @NgModule({
   declarations: [
@@ -19,7 +29,11 @@ import { ItemComponent } from './item/item.component';
     NavBarComponent,
     HomePageComponent,
     ItemMenuComponent,
-    ItemComponent  
+    ItemComponent,
+    LoginComponent,
+    UserComponent,
+    RegisterComponent,
+    OrderComponent  
   ],
   imports: [
     BrowserModule,
@@ -27,9 +41,12 @@ import { ItemComponent } from './item/item.component';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
-    ],
-  providers: [],
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
+    ], 
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

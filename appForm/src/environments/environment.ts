@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  firebase : {
+    apiKey: "AIzaSyBJMQ3A1Hye7NxgZYszOYZ4zg8iHcThOXM",
+    authDomain: "nargis-kitchen.firebaseapp.com",
+    databaseURL: "https://nargis-kitchen.firebaseio.com",
+    projectId: "nargis-kitchen",
+    storageBucket: "nargis-kitchen.appspot.com",
+    messagingSenderId: "520265468944",
+    appId: "1:520265468944:web:e2b9166488d83d85"
+  }
 };
 
 /*
